@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html>
+	<head>
+		
+	</head>
+	
+	<h1>Singleton + Iterator</h1>
+	
+	<h2>What are Singletons and Iterators?</h2>
+	<p>Singletons are objects that are only instantiated once. They may contain objects and functions that you would not want multiple objects to have, such as 
+		database connection objects for example. Singletons are used more like tools rather than classes. It is also worthy of note that when using a singleton, 
+		you may delay their initialization if desired.</p>
+		
+	<p>Iterators travel through collections of objects and can access their properties. Javascript does not contain a for each loop, but the creation 
+		of an iterator can provide that functionality.</p>
+	
+	<h2>How do These Patterns Work Together?</h2>
+	<p>In this case, the iterator IS the singleton. Only one instance of the iterator is allowed to be created. There is no point in having multiple 
+		iterators instantiated, as only one is needed to handle most jobs. This example simply creates an array of fruits and uses the iterator to 
+		print them all. The iterator is passed into 2 different variables to determine if the same instance will be passed into both variables.</p>
+	
+	<a href="javascript/C2.js">Javascript</a>
+	<br>
+	
+	<body>
+		<div id = "divList1"></div>
+		
+		<div id = "divList2"></div>
+	</body>
+	
+	<script src="javascript/C2.js"></script>
+</html>

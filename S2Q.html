@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html>
+	<head>
+
+	</head>
+	
+	
+	
+	<body>
+		<div id = "qunit"></div>
+		<div id = "qunit-fixture">
+			
+		</div>
+		<div id = "divBang"></div>
+	</body>
+	
+		<script src="QUnit/qunit.js"></script>
+		<script src="javascript/S2.js"></script>
+		<link rel="stylesheet" href="QUnit/qunit.css">
+		
+		<script>
+			//An iterator that decorates Robot objects with a fireGatlingGun function.
+			//Test to see if the fireGatlingGun function exists, but first test the iterator.
+			var robots = [new Robot(),new Robot(),new Robot()];
+			var myIterator = Iterator.getInstance();
+			myIterator.setItems(robots);
+			
+			test("Test the Functionality of the Iterator", function(){
+				var i = 0;
+				myIterator.each(function(item){
+					item.fireGatlingGun = function(){
+						document.getElementById("divBang").innerHTML += "BangBangBang!!!<br>";
+					}
+				i+=1;
+				});
+				
+				equal(i,3);
+			});
+
+			test("Check Robot Weaponry", function(){
+				var b;
+				myIterator.each(function(item){
+					if(typeof(item.fireGatlingGun,"function")){
+						b = true;
+					} else { b = false }
+				});
+				
+				equal(b,true);
+			});
+			
+		</script>
+</html>

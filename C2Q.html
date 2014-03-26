@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html>
+	<head>
+
+	</head>
+	
+	
+	
+	<body>
+		<div id = "qunit"></div>
+		<div id = "qunit-fixture">
+			
+		</div>
+		<div id = "divList1"></div>
+		
+		<div id = "divList2"></div>
+	</body>
+	
+		<script src="QUnit/qunit.js"></script>
+		<script src="javascript/C2.js"></script>
+		<link rel="stylesheet" href="QUnit/qunit.css">
+		
+		<script>
+			//Can we prove that we aren't creating a 2nd iterator?
+			test("Proving That the Iterator is a Singleton",function(){
+				//Create 2 new variables and set them to Iterator.getInstance();
+				var abc = Iterator.getInstance();
+				var def = Iterator.getInstance();
+				//Both variables should link to the same instance, which has a list of fruits.
+				//Compare the list of fruits to prove that more than 1 iterator wasn't created.
+				equal(abc.items,def.items);
+			});
+			
+			test("Checking That the Iterator Works",function(){
+				//Simple, just check that the list has been printed out in the div
+				equal(document.getElementById("divList1").innerHTML,"AppleBananaGrapesPeachesStrawberries");
+			});
+		</script>
+</html>

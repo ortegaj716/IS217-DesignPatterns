@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html>
+	<head>
+		
+	</head>
+	
+	<h1>Facade + State</h1>
+	
+	<h2>What are Facades and States?</h2>
+	<p>Facades are function that provide easy high level access to very complicated objects. They obscure the inner workings to present a very easy and 
+		workable interface to programmers (Somewhat similar to the factory design pattern; it hides the complicated object creation by presenting an easy
+		 interface).</p>
+	
+	<p>States determine how certain functions and objects behave. The logic behind certain portions of an object may change depending on the state. For example, 
+		a traffic light will light up its red light when its state is STOP and light up its green light when its state is GO.</p>
+	
+	<h2>How do These Patterns Work Together?</h2>
+	<p>This example presents a car with the function accelerate. The car has different states: off, on, and damaged. Using the accelerate function provides 
+		different functionality depending on what state the car is in. All of this logic is hidden behind a facade; the user only needs to know one function: accelerate. 
+		Regardless of what happens when you attempt to accelerate (whether you move or not) depends on the state, but there is only one function to accelerate.</p>
+	
+	<a href="javascript/S1.js">Javascript</a>
+	<br>
+	
+	<body>
+		<div id = "divOff"></div>
+		<div id = "divOn"></div>
+		<div id = "divDamaged"></div>
+	</body>
+	
+	<script src="javascript/S1.js"></script>
+</html>

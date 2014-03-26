@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html>
+	<head>
+
+	</head>
+	
+	
+	
+	<body>
+		<div id = "qunit"></div>
+		<div id = "qunit-fixture">
+			
+		</div>
+		
+		<div id = "divSpring"></div>
+		<div id = "divSummer"></div>
+		<div id = "divFall"></div>
+		<div id = "divWinter"></div>
+		
+	</body>
+	
+		<script src="QUnit/qunit.js"></script>
+		<script src="javascript/B2.js"></script>
+		<link rel="stylesheet" href="QUnit/qunit.css">
+		
+		<script>
+			//Javascript code already prints function results into divs. Just check if divs equal what they should.
+			test("Creating a Spring Gift",function(){
+				equal(document.getElementById("divSpring").innerHTML,"Umbrella");
+			});
+			test("Creating a Summer Gift",function(){
+				equal(document.getElementById("divSummer").innerHTML,"Shorts");
+			});
+			test("Creating a Fall Gift",function(){
+				equal(document.getElementById("divFall").innerHTML,"Coat");
+			});
+			test("Creating a Winter Gift",function(){
+				equal(document.getElementById("divWinter").innerHTML,"Boots");
+			});
+		</script>
+</html>

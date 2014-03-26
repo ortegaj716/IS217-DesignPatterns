@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html>
+	<head>
+		
+	</head>
+	
+	<h1>Memento + Facade</h1>
+	
+	<h2>What are Mementos and Facades?</h2>
+	<p>If you know about transactions in InnoDB type databases, then mementos should be familiar territory. Mementos are containers for data sets. Whenever you 
+		need to save an object's attributes, you would put them in a memento, and then put the memento in an array. As you keep making mementos, you would 
+		start to accumulate a history for that object. If for some reason you need to rollback to a previous state, you could restore your object's data set
+		to that of a previous memento in the array.</p>
+	
+	<p>Facades are function that provide easy high level access to very complicated objects. They obscure the inner workings to present a very easy and 
+		workable interface to programmers (Somewhat similar to the factory design pattern; it hides the complicated object creation by presenting an easy
+		 interface).</p>
+	
+	<h2>How do These Patterns Work Together?</h2>
+	<p>This example presents mementos that hold 5 cards. Whenever you set your hand to something else, the memento gets saved before it is changed. 
+		The program presents a facade by demonstrating an easier way to work with the mementos by saving them automatically when changing your hand.</p>
+	
+	<body>
+		
+		<a href="javascript/B1.js">Javascript</a>
+		<br>
+		
+		<div id = "divFirstHand">
+			
+		</div>
+		
+		<div id = "divSecondHand">
+			
+		</div>
+		
+		<div id = "divOops">
+			
+		</div>
+	</body>
+	
+	<script src="javascript/B1.js"></script>
+</html>

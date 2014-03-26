@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html>
+	<head>
+		
+	</head>
+	
+	<h1>Factory + Decorator</h1>
+	
+	<h2>What are Factories and Decorators?</h2>
+	<p>Factories are responsible for the creation of objects. Some objects are more complex than others, and could have a lot of setting 
+		up to do before proper use. They may have plenty of variables that need to be set or may need other objects to be instantiated inside 
+		them and set up as well. Factories take care of complicated object creation and return the fully configured instance.</p>
+
+	<p>Decorators are functions that get added to existing classes dynamically. They provide a quick and easy way to add additional functionality 
+		to an object. Functions that are added dynamically are usually not required for the class to run properly, or else they would have been 
+		implemented in the class itself.</p>
+	
+	<h2>How do These Patterns Work Together?</h2>
+	<p>Factories can simplify the creation of complex objects. If you use a factory to specify what kind of object needs to be created or what 
+		attributes it should have, the creation of that object becomes easier for the programmer. Some objects may need special functionality; this 
+		is where the decorator comes in. In this example, the factory creates players, but adds additional skills (by the use of decorators) 
+		depending on what role the player has.</p>
+	
+	<body>
+		
+		<a href="javascript/C1.js">Javascript</a>
+		<br>
+		
+		<div id = "divWarrior">
+			
+		</div>
+		
+		<div id = "divWizard">
+			
+		</div>
+	</body>
+	
+	<script src="javascript/C1.js"></script>
+</html>

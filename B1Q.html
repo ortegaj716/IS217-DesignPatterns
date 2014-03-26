@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html>
+	<head>
+
+	</head>
+	
+	
+	
+	<body>
+		<div id = "qunit"></div>
+		<div id = "qunit-fixture">
+			
+		</div>
+		<div id = "divFirstHand"></div>
+		<div id = "divSecondHand"></div>
+		<div id = "divOops"></div>
+	</body>
+	
+		<script src="QUnit/qunit.js"></script>
+		<script src="javascript/B1.js"></script>
+		<link rel="stylesheet" href="QUnit/qunit.css">
+		
+		<script>
+			var myHand = new Originator(); //Start with a Queen card...
+			var originalMemento = myHand.getHand();
+ 			myHand.setHand({
+			 	card1: "Queen",
+			 	card2: "5",
+			 	card3: "8",
+			 	card4: "King"
+			});
+			myHand.setHand(myHand.previousHand(0));
+			document.getElementById("divOops").innerHTML = myHand.printHand();
+			
+			//Test to see that we rolled back to the original state
+			test("Memento test",function(){
+				var same = true;
+				if(myHand.getHand().card1 !== originalMemento.card1){
+					same = false;
+				}
+				if(myHand.getHand().card2 !== originalMemento.card2){
+					same = false;
+				}
+				if(myHand.getHand().card3 !== originalMemento.card3){
+					same = false;
+				}
+				if(myHand.getHand().card4 !== originalMemento.card4){
+					same = false;
+				}
+				if(myHand.getHand().card5 !== originalMemento.card5){
+					same = false;
+				}
+				equal(same,true);
+			});
+			
+		</script>
+</html>

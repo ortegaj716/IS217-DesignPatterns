@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html>
+	<head>
+		
+	</head>
+	
+	<h1>State + Factory</h1>
+	
+	<h2>What are States and Factories?</h2>
+	<p>Factories are responsible for the creation of objects. Some objects are more complex than others, and could have a lot of setting 
+		up to do before proper use. They may have plenty of variables that need to be set or may need other objects to be instantiated inside 
+		them and set up as well. Factories take care of complicated object creation and return the fully configured instance.</p>
+		
+	<p>States determine how certain functions and objects behave. The logic behind certain portions of an object may change depending on the state. For example, 
+		a traffic light will light up its red light when its state is STOP and light up its green light when its state is GO.</p>
+	
+	<h2>How do These Patterns Work Together?</h2>
+	<p>This program contains a factory that creates objects depending on what state it's set to. If you needed to only create a certain type of object, 
+		instead of creating a whole bunch of if statements, you could simply just make a state to keep track of what objects should be made.</p>
+	
+	<body>
+		
+		<a href="javascript/B2.js">Javascript</a>
+		<br>
+		
+		<div id = "divSpring"></div>
+		
+		<div id = "divSummer"></div>
+		
+		<div id = "divFall"></div>
+		
+		<div id = "divWinter"></div>
+	</body>
+	
+	<script src="javascript/B2.js"></script>
+</html>

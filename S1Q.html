@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html>
+	<head>
+
+	</head>
+	
+	
+	
+	<body>
+		<div id = "qunit"></div>
+		<div id = "qunit-fixture">
+			
+		</div>
+		<div id = "divOff"></div>
+		<div id = "divOn"></div>
+		<div id = "divDamaged"></div>
+	</body>
+	
+		<script src="QUnit/qunit.js"></script>
+		<script src="javascript/S1.js"></script>
+		<link rel="stylesheet" href="QUnit/qunit.css">
+		
+		<script>
+			//We should test if shifting states will change how the accelerate function works.
+			test("Accelerating While the Car is Off",function(){
+				var ford = new Car();
+				//ford should have a state of "off" as the default
+				ford.accelerate();
+				equal(document.getElementById("divOff").innerHTML,"You can\'t accelerate, the car is off!");
+			});
+			test("Accelerating While the Car is On",function(){
+				var honda = new Car();
+				honda.switchState("on");
+				honda.accelerate();
+				equal(document.getElementById("divOn").innerHTML,"You drive away!");
+			});
+			test("Accelerating While the Car is Damaged",function(){
+				var hunkOfJunk = new Car();
+				hunkOfJunk.switchState("damaged");
+				hunkOfJunk.accelerate();
+				equal(document.getElementById("divDamaged").innerHTML,"Uh-oh, the car isn\'t working. I hope you have the money to see a mechanic...");
+			});
+		</script>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html>
+	<head>
+
+	</head>
+	
+	
+	
+	<body>
+		<div id = "qunit"></div>
+		<div id = "qunit-fixture"></div>
+		
+		<div id = "divWarrior">
+		</div>
+		
+		<div id = "divWizard">
+		</div>
+	</body>
+	
+		<script src="QUnit/qunit.js"></script>
+		<script src="javascript/C1.js"></script>
+		<link rel="stylesheet" href="QUnit/qunit.css">
+		
+		<script>
+			//Is Conan a warrior?
+			test("Creating a Warrior",function(){
+				equal(conan.role,"Warrior");
+			});
+			//Is Merlin a wizard?
+			test("Creating a Wizard",function(){
+				equal(merlin.role,"Wizard");
+			});
+			//Can Conan raise his shield?
+			test("Warrior\'s Shield",function(){
+				equal(typeof(conan.raiseShield),"function");
+			});
+			//Can Merlin cast a spell?
+			test("Wizard\'s Spell",function(){
+				equal(typeof(merlin.castSpell),"function");
+			});
+		</script>
+</html>
